@@ -2,7 +2,7 @@
   "name": "calcul-app",
   "version": "0.1.0",
   "private": true,
- "engines": {
+  "engines": {
     "npm": "5.7.1",
     "node": "9.5.0"
   },
@@ -34,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-react": "^7.19.0"
   }
 }
