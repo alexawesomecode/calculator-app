@@ -1,6 +1,5 @@
 import React from 'react';
 import Display from './Display';
-import Button from './Button';
 import ButtonPanel from './ButtonPanel';
 
 
@@ -9,7 +8,7 @@ function App() {
     <div>
 
       <Display value="OOO" />
-      <Button name="boton" color="white" wide />
+
       <ButtonPanel />
     </div>
   );
