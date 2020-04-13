@@ -1,29 +1,24 @@
 
-  import React from 'react';
-  import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-    class Button extends React.Component {
-    
+const Button = props => {
+  const { color, name } = props;
 
-  
-  
-    
-      render() { 
-    return (
-        <div className="button" style={{backgroundColor: this.props.color}}>
-      <h2>B{this.props.name} </h2>
-        </div>
-    )
-      }
-    }
+  return (
+    <div className="button" style={{ backgroundColor: color }}>
+      <h2>
+        {name}
+      </h2>
+    </div>
+  );
+};
 
-Button.defaultProps = {
-      
-  name: 'O'
-}
-    Button.propTypes = {
-  
-      name: PropTypes.string.isRequired
-    }
 
-    export default Button;
+Button.propTypes = {
+
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+};
+
+export default Button;

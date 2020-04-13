@@ -1,25 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-class Display extends React.Component {
-  
-  
-    render() { 
+import PropTypes from 'prop-types';
+
+const Display = props => {
+  const { value } = props;
   return (
     <div className="display">
-    <h2>{this.props.value} </h2>
-      </div>
-  )
-    }
-  }
+      <h2>
+        {value}
+      </h2>
+    </div>
+  );
+};
 
-  Display.defaultProps = {
-    
-    value: 'O'
-  }
+Display.defaultProps = {
 
-  Display.propTypes = {
+  value: 'O',
+};
 
-    value: PropTypes.string.isRequired
-  }
+Display.propTypes = {
 
-  export default Display;
+  value: PropTypes.string,
+};
+
+export default Display;
