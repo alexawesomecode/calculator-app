@@ -3,10 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { color, name } = props;
+  const { name } = props;
 
   return (
-    <div className="button" style={{ backgroundColor: color }}>
+    <div className="button">
       <h2>
         {name}
       </h2>
@@ -18,7 +18,7 @@ const Button = props => {
 Button.propTypes = {
 
   name: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+
 };
 
 export default Button;
