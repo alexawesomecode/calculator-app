@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const Button = props => {
   const { color, name, wide } = props;
 
-
   if (wide === true) {
     return (
       <div className="button wide" style={{ backgroundColor: color }}>
@@ -15,8 +14,6 @@ const Button = props => {
       </div>
     );
   }
-
-
   return (
     <div className="button" style={{ backgroundColor: color }}>
       <h2>
@@ -37,6 +34,7 @@ Button.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string,
   wide: PropTypes.bool,
+
 
 };
 
