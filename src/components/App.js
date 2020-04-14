@@ -8,7 +8,6 @@ function App() {
     <div>
 
       <Display value="OOO" />
-
       <ButtonPanel />
     </div>
   );
