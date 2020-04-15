@@ -1,5 +1,4 @@
 const operate = require('./operate.js');
-
 const calculate = (data, button) => {
   let { total } = data;
   let prevOperation; let input; let
