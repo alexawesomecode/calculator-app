@@ -20,7 +20,7 @@ export const operate = (one, two, operation) => {
   }
 
   if (operation === '%') {
-    result = Big(one).mod(Big(two));
+    result = Big(two) / 100;
     return result.toString();
   }
 
