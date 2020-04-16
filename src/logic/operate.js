@@ -20,10 +20,10 @@ export const operate = (one, two, operation) => {
     return result.toString();
   }
 
-  if (operation === '%') {
-    result = Big(100).div(Big(one).plus(Big(two)));
+  if (operation === '=') {
+    result = Big(one).mul(1)
     return result.toString();
-  }
+    }
 
   return result;
 };
