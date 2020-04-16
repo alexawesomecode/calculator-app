@@ -3,23 +3,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { color, name, wide } = props;
-
+  const { color, name, wide, handleClick } = props;
+  const onChildClick = () => {
+    console.log(name)    
+    handleClick(name)
+  }
   if (wide === true) {
     return (
-      <div className="button wide" style={{ backgroundColor: color }}>
+      <button className="button wide" style={{ backgroundColor: color }}  onClick={onChildClick}>
         <h2>
           {name}
         </h2>
-      </div>
+      </button>
     );
   }
   return (
-    <div className="button" style={{ backgroundColor: color }}>
+    <button className="button" style={{ backgroundColor: color }} onClick={onChildClick}>
       <h2>
         {name}
       </h2>
-    </div>
+    </button>
   );
 };
 

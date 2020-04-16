@@ -2,39 +2,44 @@
 import React from 'react';
 import Button from './Button';
 
-const ButtonPanel = () => (
+const ButtonPanel = (props) => {
+
+  const { clickHandler } = props;
+
+  return (
   <div className="panel">
     <div className="group-1">
-      <Button name="AC" />
-      <Button name="plus-minus" />
-      <Button name="percent" />
-      <Button name="division" />
+      <Button name="AC" handleClick={clickHandler}/>
+      <Button name="+/-" handleClick={clickHandler} />
+      <Button name="%" handleClick={clickHandler}/>
+      <Button name="/" handleClick={clickHandler}/>
     </div>
     <div className="group-2">
-      <Button name="7" />
-      <Button name="8" />
-      <Button name="9" />
-      <Button name="X" />
+      <Button name="7" handleClick={clickHandler}/>
+      <Button name="8" handleClick={clickHandler}/>
+      <Button name="9" handleClick={clickHandler}/>
+      <Button name="x" handleClick={clickHandler}/>
     </div>
     <div className="group-3">
-      <Button name="4" />
-      <Button name="5" />
-      <Button name="6" />
-      <Button name="minus" />
+      <Button name="4" handleClick={clickHandler}/>
+      <Button name="5" handleClick={clickHandler} />
+      <Button name="6" handleClick={clickHandler}/>
+      <Button name="-" handleClick={clickHandler}/>
     </div>
     <div className="group-4">
-      <Button name="1" color="whitesmoke" />
-      <Button name="2" color="whitesmoke" />
-      <Button name="3" color="whitesmoke" />
-      <Button name="plus" color="yellow" />
+      <Button name="1" color="whitesmoke" handleClick={clickHandler}/>
+      <Button name="2" color="whitesmoke" handleClick={clickHandler}/>
+      <Button name="3" color="whitesmoke" handleClick={clickHandler} />
+      <Button name="+" color="yellow" handleClick={clickHandler}/>
     </div>
     <div className="group-5">
-      <Button name="0" wide color="whitesmoke" />
-      <Button name="dot" />
-      <Button name="equal" />
+      <Button name="0" wide color="whitesmoke" handleClick={clickHandler} />
+      <Button name="." handleClick={clickHandler} />
+      <Button name="=" handleClick={clickHandler} />
     </div>
 
   </div>
-);
+  )
+  };
 
 export default ButtonPanel;

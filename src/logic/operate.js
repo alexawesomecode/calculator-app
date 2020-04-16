@@ -1,4 +1,4 @@
-const Big = require('big.js');
+import Big from 'big.js'
 
 let result;
 export const operate = (one, two, operation) => {
@@ -15,6 +15,7 @@ export const operate = (one, two, operation) => {
     return result.toString();
   }
   if (operation === 'x') {
+    console.log(one, 'two:', two)
     result = Big(one).mul(Big(two));
     return result.toString();
   }
