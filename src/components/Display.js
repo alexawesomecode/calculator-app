@@ -14,7 +14,7 @@ const Display = props => {
 
 Display.defaultProps = {
 
-  result: 'O',
+  result: '0',
 };
 
 Display.propTypes = {
