@@ -1,12 +1,17 @@
 import Big from 'big.js';
 
 let result;
+
 export const Operation = (one, two, operation) => {
   if (operation === '-') {
     result = Big(one).minus(Big(two));
     return result.toString();
   }
   if (operation === '/') {
+    if (two === '0') {
+      result = Big(one).div(1);
+      return result.toString();
+    }
     result = Big(one).div(Big(two));
     return result.toString();
   }
