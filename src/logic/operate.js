@@ -28,6 +28,10 @@ export const Operation = (one, two, operation) => {
     result = Big(one).mul(1);
     return result.toString();
   }
+  if (operation === '%') {
+    result = Big(two) / 100;
+    return result.toString();
+  }
 
   return result;
 };
